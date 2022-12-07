@@ -1,4 +1,4 @@
-package com.telran.oscar.tests.pages;
+package com.telran.oscar.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

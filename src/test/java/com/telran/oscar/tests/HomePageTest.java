@@ -1,4 +1,4 @@
-package com.telran.oscar.tests.tests;
+package com.telran.oscar.tests;
 
 import org.testng.annotations.Test;
 

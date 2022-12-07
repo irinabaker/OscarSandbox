@@ -1,9 +1,9 @@
-package com.telran.oscar.tests.tests;
+package com.telran.oscar.tests;
 
-import com.telran.oscar.tests.pages.HomePage;
-import com.telran.oscar.tests.pages.LoginOrRegisterPage;
-import com.telran.oscar.tests.pages.data.UserData;
-import com.telran.oscar.tests.pages.data.WarningData;
+import com.telran.oscar.data.WarningData;
+import com.telran.oscar.pages.HomePage;
+import com.telran.oscar.pages.LoginOrRegisterPage;
+import com.telran.oscar.data.UserData;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
