@@ -14,6 +14,6 @@ public class UserData {
     public static final String ADDRESS = "Green street,9";
     public static final String CITY = "Cabaret";
     public static final String POST_CODE = "6130";
-    public static final String COUNTRY = "Haity";
+    public static final String COUNTRY = "Haiti";
 
 }

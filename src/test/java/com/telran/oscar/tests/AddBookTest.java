@@ -22,7 +22,7 @@ public class AddBookTest extends BaseTest{
     public void addBookTest() {
         new HomePage(driver).clickOnAllProductsLink().clickOnAddToBasketButton();
         new BasketPage(driver).clickOnViewBasketButton();
-        new CheckoutPage(driver).clickOnProceedToCheckout().enterReqgituiredAddressFields(UserData.FIRST_NAME, UserData.SECOND_NAME,
+        new CheckoutPage(driver).clickOnProceedToCheckout().enterRequiredAddressFields(UserData.FIRST_NAME, UserData.SECOND_NAME,
                 UserData.ADDRESS, UserData.CITY, UserData.POST_CODE)
                 .clickOnContinueButton()
                 .clickOnPlaceOrderButton();

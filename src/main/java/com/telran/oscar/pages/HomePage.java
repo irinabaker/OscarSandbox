@@ -4,8 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.Collection;
-
 public class HomePage extends BasePage {
 
     public HomePage(WebDriver driver) {
@@ -16,13 +14,14 @@ public class HomePage extends BasePage {
     WebElement LoginOrRegister;
 
 
+    @FindBy(css = ".alertinner.wicon")
+    WebElement confirmationOfRegistration;
+
+
     public LoginOrRegisterPage clickOnLoginOrRegisterLink() {
         click(LoginOrRegister);
         return new LoginOrRegisterPage(driver);
     }
-
-    @FindBy(css = ".alertinner.wicon")
-    WebElement confirmationOfRegistration;
 
     public HomePage verifyTextThanksForRegistering(String text) {
         if (confirmationOfRegistration.getText().equalsIgnoreCase(text)) {
@@ -57,7 +56,6 @@ public class HomePage extends BasePage {
         return new AllProductsPage(driver);
     }
 
-
     @FindBy(xpath = "//*[@href='/en-gb/']")
     WebElement logo;
 
@@ -75,6 +73,3 @@ public class HomePage extends BasePage {
 
     }
 }
-
-//*[.='Welcome!']
-// @FindBy(xpath = "//div[@class='sub-header']/h2[@xpath='1']")

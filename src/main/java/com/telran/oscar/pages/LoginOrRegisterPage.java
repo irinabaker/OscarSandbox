@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.Collection;
+
 public class LoginOrRegisterPage extends BasePage{
     
     public LoginOrRegisterPage(WebDriver driver) {
@@ -58,5 +60,13 @@ public class LoginOrRegisterPage extends BasePage{
 
     public String getWarningResult() {
         return warningResult.getText();
+    }
+
+
+    @FindBy(css = ".error-block")
+    WebElement warningEmailResult;
+
+    public String getWarningText() {
+        return warningEmailResult.getText();
     }
 }

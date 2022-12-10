@@ -12,6 +12,7 @@ public class BasketPage extends BasePage{
 
     @FindBy(css = ".btn-group")
     WebElement viewBasketHeader;
+
     public BasketPage clickOnViewBasketButton() {
         click(viewBasketHeader);
         return this;

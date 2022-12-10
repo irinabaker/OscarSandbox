@@ -3,6 +3,13 @@ package com.telran.oscar.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
+
+import javax.imageio.ImageIO;
+import java.io.File;
+import java.io.IOException;
 
 public class  BasePage {
 
@@ -24,5 +31,17 @@ public class  BasePage {
             element.clear();
             element.sendKeys(text);
         }
+    }
+    public Screenshot takeScreenshotWithScrollDown () {
+        Screenshot screen = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(ShootingStrategies.scaling(1.5f), 1000))
+                .takeScreenshot(driver);
+
+        try {
+            ImageIO.write(screen.getImage(),"png",
+                    new File("screenshot/screen" + System.currentTimeMillis() + ".png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return screen;
     }
 }
